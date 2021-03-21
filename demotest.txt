@@ -1,1 +1,2 @@
-Hello, I am new to team.I want to learn all git commands. 
+Hello, I am new to team.I want to learn all git commands.
+I know what I have to do. 
