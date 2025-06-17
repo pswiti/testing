@@ -1,6 +1,20 @@
+#Directory structure:
 azure-flask-app/
 │
 ├── main.tf
 ├── variables.tf
 ├── outputs.tf
 └── terraform.tfvars
+# Initialize and deploy:
+terraform init
+terraform apply
+# Deploy Flask App to Azure
+zip -r flask-app.zip . -x "*.terraform*" "*.zip"
+
+#Deploy using Azure CLI
+az webapp deployment source config-zip \
+  --resource-group flask-demo-rg \
+  --name flask-demo-app123 \
+  --src flask-app.zip
+# Open in browser
+https://flask-azuredemo-app123.azurewebsites.net
